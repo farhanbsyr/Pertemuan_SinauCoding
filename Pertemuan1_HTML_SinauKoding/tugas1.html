@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tugas 1</title>
+  </head>
+  <body>
+    <table align="center" cellpadding="5px" border="1" width="90%">
+      <thead>
+        <tr>
+          <th>Jenis</th>
+          <th>Hasil</th>
+          <th>Keterangan</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>Text</th>
+          <td align="center">
+            <form>
+              <label>
+                Input Text:
+                <input type="text" placeholder="input text" />
+              </label>
+            </form>
+          </td>
+          <td>tipe inputan yang diterima adalah text</td>
+        </tr>
+        <tr>
+          <th>Number</th>
+          <td align="center">
+            <form>
+              <label>
+                Input Number:
+                <input type="number" placeholder="input number" />
+              </label>
+            </form>
+          </td>
+          <td>
+            tipe inputan yang diterima adalah number/ angka dan karakter yang
+            diterima adalah angka
+          </td>
+        </tr>
+        <tr>
+          <th>Email</th>
+          <td align="center">
+            <form>
+              <label>
+                Input Email:
+                <input type="email" placeholder="input email" />
+              </label>
+            </form>
+          </td>
+          <td>
+            tipe inputan yang diterima adalah email dan mengandung validasi
+          </td>
+        </tr>
+        <tr>
+          <th>Password</th>
+          <td align="center">
+            <form>
+              <label>
+                Input Password:
+                <input type="number" placeholder="input password" />
+              </label>
+            </form>
+          </td>
+          <td>
+            tipe inputan yang diterima adalah text tetapi akan disembunyikan
+            dalam bentuk bintang
+          </td>
+        </tr>
+        <tr>
+          <th>Radio</th>
+          <td align="center">
+            <form>
+              Input Radio
+              <input
+                type="radio"
+                checked
+                id="Radio1"
+                name="Radio"
+                value="Radio1"
+              />
+              <label for="Radio1">Radio 1</label>
+
+              <input type="radio" id="Radio2" name="Radio" value="Radio2" />
+              <label for="Radio2">Radio 2</label>
+            </form>
+          </td>
+          <td>
+            tipe inputan yang diterima adalah berupa pilihan dan anya bisa
+            dipilih salah satu
+          </td>
+        </tr>
+        <tr>
+          <th>Checkbox</th>
+          <td align="center">
+            <form>
+              Input Checkbox
+              <input
+                type="checkbox"
+                checked
+                id="checkbox"
+                name="checkbox"
+                value="checkbox"
+              />
+              <label for="checkbox">checkbox 1</label>
+
+              <input
+                type="checkbox"
+                id="checkbox2"
+                name="checkbox"
+                value="checkbox2"
+              />
+              <label for="checkbox2">checkbox 2</label>
+            </form>
+          </td>
+          <td>
+            tipe inputan yang diterima adalah checklist dan bisa dipilih
+            beberapa
+          </td>
+        </tr>
+        <tr>
+          <th>Password</th>
+          <td align="center">
+            <form>
+              <label>
+                Input Password:
+                <input type="range" max="100" min="0" value="50" />
+              </label>
+            </form>
+          </td>
+          <td>tipe inputan yang diterima adalah bar yang bisa digeser</td>
+        </tr>
+        <tr>
+          <th>Time</th>
+          <td align="center">
+            <form>
+              <label>
+                Input Time:
+                <input type="time" />
+              </label>
+            </form>
+          </td>
+          <td>tipe inputan yang diterima adalah format waktu</td>
+        </tr>
+        <tr>
+          <th>Time</th>
+          <td align="center">
+            <form>
+              <label>
+                Input Date:
+                <input type="date" />
+              </label>
+            </form>
+          </td>
+          <td>
+            tipe inputan yang diterima adalah format waktu dalah satuan
+            bulan(mm), satuan hari(dd) dan satuan tahun(yyyy)
+          </td>
+        </tr>
+        <tr>
+          <th>Week</th>
+          <td align="center">
+            <form>
+              <label>
+                Input Week:
+                <input type="week" />
+              </label>
+            </form>
+          </td>
+          <td>
+            tipe inputan yang diterima adalah format waktu dalah dalam kurun
+            waktu satu minggu
+          </td>
+        </tr>
+        <tr>
+          <th>Month</th>
+          <td align="center">
+            <form>
+              <label>
+                Input Month:
+                <input type="month" />
+              </label>
+            </form>
+          </td>
+          <td>
+            tipe inputan yang diterima adalah format waktu dalah waktu satuan
+            hari bulan (bbbbbbbb) dan tahun (tttt)
+          </td>
+        </tr>
+        <tr>
+          <th>Color</th>
+          <td align="center">
+            <form>
+              <label>
+                Input Color:
+                <input type="color" value="$000000" />
+              </label>
+            </form>
+          </td>
+          <td>
+            tipe inputan yang diterima adalah berupa warna yang dihasilkan
+          </td>
+        </tr>
+        <tr>
+          <th>File</th>
+          <td align="center">
+            <form>
+              <label>
+                Input File:
+                <input type="file" />
+              </label>
+            </form>
+          </td>
+          <td>tipe inputan yang diterima adalah dalam bentuk file</td>
+        </tr>
+        <tr>
+          <th>Combo box</th>
+          <td align="center">
+            <form>
+              <label for="options">Pilih mobil:</label>
+              <select id="options" name="options">
+                <option value="options1">options1</option>
+                <option value="option2">options2</option>
+                <option value="options3">options3</option>
+                <option value="options4">options4</option>
+              </select>
+            </form>
+          </td>
+          <td>tipe inputan yang diterima adalah option yang bisa dipilih</td>
+        </tr>
+        <tr>
+          <th>Textarea</th>
+          <td align="center">
+            <form>
+              <label for="contoh"
+                >Input Textarea: <br />
+                <textarea
+                  name="contoh"
+                  id="contoh"
+                  cols="30"
+                  rows="5"
+                ></textarea>
+              </label>
+            </form>
+          </td>
+          <td>tipe inputan yang diterima adalah text tetapi dalam karakter yang banyak</td>
+        </tr>
+        <tr>
+            <th>Button</th>
+            <td align="center">
+              <form>
+                <button type="button">Button</button>
+                <button type="reset">Reset</button>
+                <button type="reset">Submit</button>
+                </label>
+              </form>
+            </td>
+            <td>suatu tombol yang bisa melakukan action tertentu ketika diberi perintah</td>
+          </tr>
+          <tr>
+            <th>Image</th>
+            <td align="center">
+              <input type="image" width="50px" src="./assets/search.png" alt="search">
+            </td>
+            <td>suatu tombol yang bisa melakukan action tertentu ketika diberi perintah</td>
+          </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
