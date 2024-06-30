@@ -1,0 +1,59 @@
+body {
+  font-family: "Poppins", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+.btn-profile {
+  height: 60px;
+  width: 350px;
+}
+.sidebar {
+  position: fixed;
+  bottom: 50%; /* Mengatur posisi 50% dari bawah halaman */
+  transform: translateY(
+    50%
+  ); /* Untuk menggeser sidebar ke atas sejauh 50% dari tingginya sendiri */
+  left: 20px; /* Atur jarak dari sisi kanan halaman */
+}
+.btn-contact {
+  border: 2px solid black;
+  background-color: white;
+  font-weight: 800;
+}
+#profile {
+  margin-top: 150px;
+}
+section {
+  margin-top: 150px;
+}
+
+#contact {
+  margin-right: 150px;
+  margin-left: 150px;
+}
+.cardTop {
+  min-height: 400px;
+}
+.card-title {
+  color: black;
+}
+.form-btn {
+  height: 60px;
+}
+
+/* footer */
+#footer {
+  background-color: #c7e4f4;
+}
+#footer p {
+  line-height: 25px;
+  margin: 0; /* Menghapus margin di sekitar paragraf */
+  padding: 0; /* Menghapus padding di dalam paragraf */
+}
+#footer a {
+  color: black;
+}
