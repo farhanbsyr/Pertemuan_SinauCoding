@@ -1,0 +1,26 @@
+.dropdown-item {
+  font-size: 16px;
+}
+.content {
+  height: 500px;
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
+}
+
+li {
+  list-style: none;
+}
+.coba {
+  width: 30px;
+}
+.github {
+  color: white;
+  background-color: white;
+}
+
+.nav-link {
+  color: white;
+}
