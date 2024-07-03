@@ -1,0 +1,176 @@
+body {
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+#contact,
+#profile,
+#skills,
+#about {
+  margin-left: 150px;
+  margin-right: 150px;
+}
+
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+.btn-profile {
+  height: 60px;
+  width: 350px;
+}
+.sidebar {
+  position: fixed;
+  bottom: 50%; /* Mengatur posisi 50% dari bawah halaman */
+  transform: translateY(
+    50%
+  ); /* Untuk menggeser sidebar ke atas sejauh 50% dari tingginya sendiri */
+  left: 20px; /* Atur jarak dari sisi kanan halaman */
+}
+.btn-contact {
+  border: 2px solid black;
+  background-color: white;
+  font-weight: 800;
+}
+#profile {
+  margin-top: 150px;
+}
+section {
+  margin-top: 150px;
+}
+
+.contact-container {
+  margin-right: 75px;
+  margin-left: 75px;
+}
+.cardTop {
+  min-height: 400px;
+}
+.card-title {
+  color: black;
+}
+.form-btn {
+  height: 60px;
+}
+
+/* footer */
+#footer {
+  background-color: #c7e4f4;
+}
+#footer p {
+  line-height: 25px;
+  margin: 0; /* Menghapus margin di sekitar paragraf */
+  padding: 0; /* Menghapus padding di dalam paragraf */
+}
+#footer a {
+  color: black;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+#contact p {
+  font-size: 1.25rem;
+}
+
+.btn-profile a {
+  width: 175px;
+  height: 60px;
+}
+#contact button {
+  width: 175px;
+  font-size: 1.15rem;
+}
+
+/* skill&certifikat */
+.border-sec {
+  min-height: 300px;
+  border: 2px solid #e5e7eb;
+  border-radius: 1rem;
+  padding: 24px;
+}
+.skill-sec {
+  width: 30%;
+}
+.sertif-sec {
+  width: 70%;
+}
+@media (max-width: 992px) {
+  .contact-container {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .border-sec {
+    width: 100%;
+  }
+  #contact,
+  #profile,
+  #about {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+}
+
+/* toogle */
+@media (max-width: 768px) {
+  #project,
+  #contact {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  #skills {
+    margin-left: 75px;
+    margin-right: 75px;
+  }
+  .sidebtn {
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(30px);
+  }
+  .cobagambar img {
+    width: 250px;
+  }
+  .text-hero p {
+    font-size: 10px;
+  }
+  .contact-container {
+    margin: 75px 20px 0 20px;
+  }
+  #contact p {
+    font-size: 20px;
+  }
+  #contact button {
+    width: 150px;
+  }
+  .sertif-sec img {
+    width: 125px;
+    height: 75px;
+  }
+}
+
+@media (max-width: 500px) {
+  .btn-profile a {
+    width: 125px;
+    height: 60px;
+  }
+  #contact p {
+    font-size: 15px;
+  }
+  .btn-profile button {
+    font-size: 14px;
+    font-weight: 800;
+  }
+  #contact,
+  #profile,
+  #about {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  #skills {
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+}
