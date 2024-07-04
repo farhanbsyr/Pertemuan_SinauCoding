@@ -1,0 +1,294 @@
+/* css reset */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* akhir CSS reset */
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+
+  height: 550px;
+}
+
+/* illustrator */
+.illustrator-container {
+  padding: 100px 0 25px 0;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+  background-color: #1e9cf1;
+}
+.illustrator-title {
+  text-align: center;
+  height: 100px;
+}
+.illustrator-title h1 {
+  font-size: 32px;
+  font-weight: 700;
+}
+.aneh {
+  font-size: 30px;
+}
+.illustrator-title p {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.illustrator-container .credit {
+  font-size: 13px;
+}
+
+/* form login */
+.form-container {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 15px;
+}
+
+.form-wrapper {
+  padding: 0 140px 0 80px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.signUp-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.signUp-container p {
+  font-size: 13px;
+}
+
+.sign-up a {
+  color: #1e9cf1;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* form */
+.form-login {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.form-login h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.form-login h3 {
+  color: #757575;
+  font-size: 14px;
+  font-weight: 600;
+}
+label {
+  width: 100%;
+}
+
+input {
+  padding: 20px 15px;
+  color: #757575;
+  background-color: #eeeeee;
+  border: none;
+  border-radius: 2px;
+  font-size: 11px;
+}
+input:focus {
+  outline: none; /* Menghilangkan garis tepi (outline) */
+  border: none; /* Menghilangkan border */
+}
+.form-login .forget-password {
+  text-align: right;
+  color: #191d23;
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+/* button */
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  text-align: center;
+}
+
+.button-group p {
+  margin: 5px 0;
+}
+
+.login {
+  background-color: #1e9cf1;
+  padding: 20px 15px;
+  font-size: 11px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+}
+
+.sign-with {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+.btn-with {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 2px;
+  border-radius: 4px;
+  gap: 4px;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+.sign-with .google {
+  width: 100%;
+  border: none;
+  background-color: #eeeeee;
+}
+.sign-with .apple {
+  border: none;
+  width: 100%;
+  background-color: #191d23;
+  color: white;
+}
