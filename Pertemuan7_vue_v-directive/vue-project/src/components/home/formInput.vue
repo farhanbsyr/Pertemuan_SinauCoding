@@ -73,15 +73,10 @@ export default {
 </template>
 
 <style>
-.form-store {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
 .form-inputData {
   display: flex;
   flex-direction: row;
-  gap: 10px;
+  gap: 15px;
   justify-content: center;
   align-items: center;
 }

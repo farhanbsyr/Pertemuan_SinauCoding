@@ -16,7 +16,6 @@ export default {
 
     // emit dari formInput
     const handleAddGroceries = (newGroceries) => {
-      console.log(newGroceries);
       listGroceries.push(newGroceries);
     };
 
@@ -60,36 +59,37 @@ export default {
 <template>
   <div class="container">
     <h1>List Ingredients</h1>
+    <div class="form-store">
+      <div class="customer_form">
+        <label for="customer">Custumer</label>
+        <input type="text" id="customer" name="customer" v-model="customer" />
+      </div>
 
-    <div>
-      <p>Custumer</p>
-      <input type="text" v-model="customer" />
-    </div>
-
-    <formVue @add-groceries="handleAddGroceries" />
-    <tabelBelanjaVue
-      :grocerie="listGroceries"
-      @update:totalPrice="handleTotalPriceUpdate"
-      @update:totalAmount="handleTotalAmountUpdate"
-    />
-    <p>Total Data : {{ listGroceries.length }}</p>
-    <div id="submitBTN">
-      <button class="form-btn" @click="addPrintBill">
-        <router-link
-          v-if="canprintInvoice"
-          :to="{
-            name: 'about',
-            query: {
-              total: total,
-              qty: qty,
-              customer: customer,
-            },
-          }"
-          class="router-link"
-          >Cetak Tagihan</router-link
-        >
-        <span v-else>Cetak Tagihan</span>
-      </button>
+      <formVue @add-groceries="handleAddGroceries" />
+      <tabelBelanjaVue
+        :grocerie="listGroceries"
+        @update:totalPrice="handleTotalPriceUpdate"
+        @update:totalAmount="handleTotalAmountUpdate"
+      />
+      <p>Total Data : {{ listGroceries.length }}</p>
+      <div id="submitBTN">
+        <button class="form-btn" @click="addPrintBill">
+          <router-link
+            v-if="canprintInvoice"
+            :to="{
+              name: 'about',
+              query: {
+                total: total,
+                qty: qty,
+                customer: customer,
+              },
+            }"
+            class="router-link"
+            >Cetak Tagihan</router-link
+          >
+          <span v-else>Cetak Tagihan</span>
+        </button>
+      </div>
     </div>
   </div>
 </template>
@@ -104,6 +104,29 @@ export default {
   justify-content: center;
   text-align: center;
 }
+.customer_form {
+  padding-left: 14px;
+  margin-top: 30px;
+}
+.customer_form input:focus {
+  background: rgba(168, 168, 255, 0.2);
+}
+.customer_form label {
+  display: block;
+}
+input {
+  background: #3e3e3e;
+  color: white;
+  padding: 3px;
+  border: 1px solid gray;
+  border-radius: 3px;
+}
+
+.form-store {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 .form-table {
   display: flex;
   justify-content: center;
@@ -117,6 +140,6 @@ export default {
   background-color: black;
   border: 0;
   color: white;
-  font-weight: 400;
+  font-weight: 600;
 }
 </style>

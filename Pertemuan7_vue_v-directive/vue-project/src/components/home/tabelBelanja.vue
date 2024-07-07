@@ -22,7 +22,6 @@ export default defineComponent({
         (total, num) => total + num.price * num.amount,
         0
       );
-      console.log(hasil);
       return hasil;
     });
     const totalAmount = computed(() => {
