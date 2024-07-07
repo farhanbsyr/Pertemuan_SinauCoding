@@ -9,36 +9,48 @@ export default {
     tabelBelanjaVue,
   },
   setup() {
-    const userName = ref("");
+    const customer = ref("");
+    const total = ref(0);
+    const qty = ref(0);
     const listGroceries = reactive([]);
-    const showBill = reactive({
-      nama: "",
-    });
 
+    // emit dari formInput
     const handleAddGroceries = (newGroceries) => {
       console.log(newGroceries);
       listGroceries.push(newGroceries);
     };
 
+    // emit dari tableBelanja
+    const handleTotalPriceUpdate = (newTotalPrice) => {
+      total.value = newTotalPrice;
+    };
+    const handleTotalAmountUpdate = (newTotalAmount) => {
+      qty.value = newTotalAmount;
+    };
+
     const addPrintBill = () => {
       if (listGroceries.length === 0) {
         alert("Please Field in customer Groceries");
-      } else if (userName.value.trim() === "") {
+      } else if (customer.value.trim() === "") {
         alert("Please Field in customer name");
+      } else {
       }
     };
     const canprintInvoice = computed(() => {
-      return listGroceries.length > 0 && userName.value.trim() !== "";
+      return listGroceries.length > 0 && customer.value.trim() !== "";
     });
 
     const showPrintBill = ref(false);
     return {
-      userName,
+      customer,
       listGroceries,
       canprintInvoice,
       handleAddGroceries,
+      handleTotalPriceUpdate,
+      handleTotalAmountUpdate,
       addPrintBill,
-      showBill,
+      total,
+      qty,
       showPrintBill,
     };
   },
@@ -51,18 +63,28 @@ export default {
 
     <div>
       <p>Custumer</p>
-      <input type="text" v-model="userName" />
-      <p>{{ userName }}</p>
+      <input type="text" v-model="customer" />
     </div>
 
     <formVue @add-groceries="handleAddGroceries" />
-    <tabelBelanjaVue :grocerie="listGroceries" />
+    <tabelBelanjaVue
+      :grocerie="listGroceries"
+      @update:totalPrice="handleTotalPriceUpdate"
+      @update:totalAmount="handleTotalAmountUpdate"
+    />
     <p>Total Data : {{ listGroceries.length }}</p>
     <div id="submitBTN">
       <button class="form-btn" @click="addPrintBill">
         <router-link
           v-if="canprintInvoice"
-          :to="{ name: 'about', params: { showBill: showBill.nama } }"
+          :to="{
+            name: 'about',
+            query: {
+              total: total,
+              qty: qty,
+              customer: customer,
+            },
+          }"
           class="router-link"
           >Cetak Tagihan</router-link
         >

@@ -1,5 +1,5 @@
 <script>
-import { computed, defineComponent } from "vue";
+import { computed, defineComponent, ref, watch } from "vue";
 
 export default defineComponent({
   props: {
@@ -8,7 +8,11 @@ export default defineComponent({
       required: true,
     },
   },
-  setup(props) {
+  setup(props, { emit }) {
+    const totalGroceries = ref({
+      amount: 0,
+      price: 0,
+    });
     const { grocerie } = props;
     const deleteGroceries = (index) => {
       grocerie.splice(index, 1);
@@ -25,8 +29,17 @@ export default defineComponent({
       return grocerie.reduce((total, item) => total + item.amount, 0);
     });
 
+    watch(totalAmount, (newTotalAmount) => {
+      emit("update:totalAmount", newTotalAmount);
+    });
+
+    watch(totalPrice, (newTotalPrice) => {
+      emit("update:totalPrice", newTotalPrice);
+    });
+
     return {
       grocerie,
+      totalGroceries,
       totalPrice,
       totalAmount,
       deleteGroceries,
@@ -67,7 +80,7 @@ export default defineComponent({
         <tr v-if="grocerie.length > 0">
           <td colspan="3">Total</td>
           <td>{{ totalAmount }}</td>
-          <td>{{ totalPrice }}</td>
+          <td>Rp.{{ totalPrice }},00</td>
           <td></td>
         </tr>
       </tbody>
